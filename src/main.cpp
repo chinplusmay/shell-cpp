@@ -6,7 +6,8 @@ int main() {
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
+  std::cout<<"$ "
   std::string in;
   std::getline(std::cin, in);
-  std::cout<<in<<":"<<" "<<"command not found";
+  std::cout<<in<<":"<<" "<<"command not found"<< std::endl;
 }
