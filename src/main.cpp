@@ -6,9 +6,12 @@ int main() {
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  std::cout<<"$ ";
-  std::string in;
-  std::getline(std::cin, in);
-  std::cout<<in<<":"<<" "<<"command not found"<< std::endl;
-  main();
+  while(true){
+    std::cout<<"$ ";
+    std::string in;
+    std::getline(std::cin, in);
+    if(in == "exit") break;
+    std::cout<<in<<":"<<" "<<"command not found"<< std::endl;
+  }
+
 }
