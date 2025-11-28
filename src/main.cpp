@@ -11,7 +11,13 @@ int main() {
     std::string in;
     std::getline(std::cin, in);
     if(in == "exit") break;
-    std::cout<<in<<":"<<" "<<"command not found"<< std::endl;
+    else if(in.find("echo") != std::string::npos){
+      std::cout<<in.substr(5)<<"\n";
+    }
+    else{
+      std::cout<<in<<":"<<" "<<"command not found"<< std::endl;
+    }
+    
   }
 
 }
